@@ -21,7 +21,7 @@ export default function Inbox(){
                      <h3>{email.subject}</h3>
                      <p>{(email.content.length > 50) ? email.content.slice(0, 49) + "..." : email.content}
                        <span>
-                         {(email.isRead == "false") && <Unread/>}
+                         {(email.isRead === "false") && <Unread/>}
                        </span>
                      </p>
                      <hr className="ligne"/>
