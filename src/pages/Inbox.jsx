@@ -6,7 +6,7 @@ export default function Inbox(){
     const [emails, setEmails] = React.useState([]);
 
     React.useEffect(() => {
-        fetch('https://emailbox-api-jtf5.onrender.com/inbox')
+        fetch('https://emailbox-api-jtf5.onrender.com/inbox', {mode: no-cors})
          .then(res => res.json())
          .then(data => setEmails(data));
      }, []);

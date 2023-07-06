@@ -7,7 +7,7 @@ export default function Home(){
     const [totalUnread, setUnread] = React.useState(0);
 
     React.useEffect(() =>{
-        fetch('https://emailbox-api-jtf5.onrender.com')
+        fetch('https://emailbox-api-jtf5.onrender.com', {mode: no-cors})
         .then(res => res.json())
         .then(data => {setTotal(data.totalMessages); setUnread(data.unread)});
     }, []);
