@@ -6,7 +6,7 @@ export default function Inbox(){
     const [emails, setEmails] = React.useState([]);
 
     React.useEffect(() => {
-        fetch('http://localhost:3500/inbox')
+        fetch('https://emailbox-api-jtf5.onrender.com/inbox')
          .then(res => res.json())
          .then(data => setEmails(data));
      }, []);

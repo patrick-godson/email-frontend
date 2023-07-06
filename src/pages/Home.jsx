@@ -7,7 +7,7 @@ export default function Home(){
     const [totalUnread, setUnread] = React.useState(0);
 
     React.useEffect(() =>{
-        fetch('http://localhost:3500')
+        fetch('https://emailbox-api-jtf5.onrender.com')
         .then(res => res.json())
         .then(data => {setTotal(data.totalMessages); setUnread(data.unread)});
     }, []);
@@ -19,7 +19,7 @@ export default function Home(){
             <h2>
               You have {totalUnread} unread messages out of {total}
             </h2>
-            <a href="http://localhost:3000/inbox" >View Messages</a>
+            <a href="https://emailbox-9n1z.onrender.com/inbox" >View Messages</a>
           </div>
         </div>
     );

@@ -10,7 +10,7 @@ export default function Message(){
     console.log(location.pathname);
 
     React.useEffect(()=>{
-        fetch(`http://localhost:3500/message/${emailId}`)
+        fetch(`https://emailbox-api-jtf5.onrender.com/message/${emailId}`)
         .then(res => res.json())
         .then(data => setMessage(data))
     }, []);
