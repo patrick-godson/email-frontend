@@ -3,7 +3,7 @@ import Unread from './Unread';
 import '../style.css';
 
 export default function Inbox(){
-    const [emails, setEmails] = React.useState([]);
+    const [emails, setEmails] = React.useState(null);
 
     React.useEffect(() => {
         fetch('https://emailbox-api-x0rw.onrender.com/inbox', {mode: "no-cors"})
@@ -15,7 +15,7 @@ export default function Inbox(){
          <div>
            <h1 className='inboxH1'>Messages</h1>
            <div className='emails'>
-             {emails.map((email) => (
+             {emails && emails.map((email) => (
                  <div className='email' key={email._id}>
                    <a href={`/message/${email._id}`}>
                      <h3>{email.subject}</h3>
