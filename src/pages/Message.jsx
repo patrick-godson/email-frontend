@@ -2,7 +2,7 @@ import React from 'react';
 import {useLocation} from 'react-router-dom';
 
 export default function Message(){
-    const [message, setMessage] = React.useState([]);
+    const [message, setMessage] = React.useState(null);
 
     const location = useLocation();
     
@@ -18,10 +18,10 @@ export default function Message(){
     return (
         <div>
             <div className="emailContainer">
-                <div key={message._id}>
+                {message && <div key={message._id}>
                     <h2>{message.subject}</h2>
                     <p  className='emailContent'>{message.content}</p>
-                </div>
+                </div>}
             </div>
         </div>
     );
