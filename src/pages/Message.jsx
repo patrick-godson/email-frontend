@@ -10,7 +10,7 @@ export default function Message(){
     console.log(location.pathname);
 
     React.useEffect(()=>{
-        fetch(`https://emailbox-api-x0rw.onrender.com/message/${emailId}`, {mode: "no-cors"})
+        fetch(`https://emailbox-api-x0rw.onrender.com/message/${emailId}`)
         .then(res => res.json())
         .then(data => setMessage(data))
     }, []);
