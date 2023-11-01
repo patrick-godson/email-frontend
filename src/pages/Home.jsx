@@ -16,7 +16,7 @@ export default function Home(){
             {data && <h2>
               You have {data.unread} unread messages out of {data.totalMessages}
             </h2>}
-            <a href="http://localhost:3000/inbox" >View Messages</a>
+            <a href="https://emailbox-9n1z.onrender.com/inbox" >View Messages</a>
           </div>
         </div>
     );
