@@ -1,7 +1,5 @@
 import {useEffect, useState} from "react";
 
-
-
 export default function Home(){
     const [total, setTotal] = useState(0);
     const [totalUnread, setUnread] = useState(0);
