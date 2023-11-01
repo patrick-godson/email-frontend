@@ -9,7 +9,7 @@ export default function Message(){
     const emailId = location.pathname.split("/")[2];
 
     useEffect(()=>{
-        fetch(`http://localhost:3500/message/${emailId}`)
+        fetch(`https://emailbox-api-1101.onrender.com/message/${emailId}`)
         .then(res => res.json())
         .then(data => setMessage(data))
     }, []);
