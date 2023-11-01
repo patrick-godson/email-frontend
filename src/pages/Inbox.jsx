@@ -6,7 +6,7 @@ export default function Inbox(){
     const [emails, setEmails] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3500/inbox')
+        fetch('https://emailbox-api-1101.onrender.com/inbox')
          .then(res => res.json())
          .then(data => setEmails(data));
      }, []);
