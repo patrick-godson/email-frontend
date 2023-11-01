@@ -1,12 +1,12 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Unread from './Unread';
 import '../style.css';
 
 export default function Inbox(){
-    const [emails, setEmails] = React.useState(null);
+    const [emails, setEmails] = useState([]);
 
-    React.useEffect(() => {
-        fetch('https://emailbox-api-x0rw.onrender.com/inbox')
+    useEffect(() => {
+        fetch('http://localhost:3500/inbox')
          .then(res => res.json())
          .then(data => setEmails(data));
      }, []);
